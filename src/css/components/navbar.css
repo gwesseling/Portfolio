@@ -1,0 +1,42 @@
+.navBar {
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    padding-top: 10px;
+}
+
+.navBar-items {
+    width: 100%;
+    margin: auto;
+    list-style-type: none;
+}
+
+.navBar-logo, .navBar-item {
+    padding: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    float: left;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.navBar-logo {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navBar-item {
+    border-right: 1px solid #999999;
+}
+
+.navBar-item:last-child {
+    border-right: none;
+}
+
+.navBar-item:hover {
+    text-decoration: underline;
+}

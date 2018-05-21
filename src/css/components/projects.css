@@ -1,0 +1,40 @@
+.project {
+    height: 100%;
+    width: calc(((100vw - 17px) / 3) - 32px);
+    float: left;
+    padding: 16px;
+}
+
+.project-image {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    object-fit: cover;
+}
+
+.project-title {
+    padding-top: 8px;
+}
+
+.project-title {
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.project-subtitle {
+    font-size: 12px;
+    color: #999999;
+}
+
+.project-description {
+    font-size: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+    .project {
+        width: calc(100% - 32px);
+    }
+}

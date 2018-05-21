@@ -1,0 +1,60 @@
+.divider {
+    height: 350px;
+    width: 100%;
+    position: relative;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.divider-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.divider-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,.6);
+    top: 0;
+}
+
+.divider-content {
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    padding: 16px;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.divider-title, .divider-subtitle {
+    position: relative;
+    z-index: 1;
+}
+
+.divider-title {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.divider-subtitle {
+    color: #999999;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .divider-content {
+        width: calc(100% - 32px);
+    }
+    .divider-title {
+        font-size: 30px;
+        text-align: center;
+    }
+}

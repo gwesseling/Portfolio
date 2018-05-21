@@ -1,0 +1,14 @@
+[version]
+^0.72.0
+
+[ignore]
+./public/*
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]
