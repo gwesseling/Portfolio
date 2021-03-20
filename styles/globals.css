@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    overflow-x: hidden;
+}
+
+.banner {
+    height: 90vh;
+}
+
+.bg-center-bottom {
+    background-position: center bottom;
+}
+.project-content-height {
+    max-height: 55px;
+    transition: max-height .2s;
+}
+.project-content-height.active {
+    max-height: 300px;
+}
