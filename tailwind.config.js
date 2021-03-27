@@ -3,14 +3,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-        color: {
+        colors: {
             off: {
                white: '#efefef',
             },
         },
         backgroundImage: theme => ({
-            'banner': "url('https://gwesseling.nl/static/media/bg.8d64d67d.png')",
-            'divider': "url('https://gwesseling.nl/static/media/divider.ffa917d1.jpg')",
+            'banner': "url('../public/bg.png')",
+            'divider': "url('../public/divider.jpg')",
         })
     },
   },

@@ -1,8 +1,11 @@
 import {useRef} from 'react';
 
+/** 
+ * Handles home methodes.
+ */
 export default function useHome() {
-    const aboutRef = useRef(null);
-    const projectsRef = useRef(null);
+    const aboutRef = useRef<HTMLElement>(null);
+    const projectsRef = useRef<HTMLElement>(null);
 
     function onAbout() {
         aboutRef.current.scrollIntoView({behavior: 'smooth'});

@@ -3,9 +3,12 @@ import Image from 'next/image'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
 
+/** 
+ * About component.
+ */
 function About(props, ref) {
     return (
-        <div className="flex justify-center h-full md:h-3/5" ref={ref}>
+        <div className="flex justify-center h-full md:h-3/5 bg-off-white" ref={ref}>
             <div className="flex flex-col h-full lg:w-5/6 xl:w-4/6 2xl:w-3/6 lg:flex-row items-center justify-evenly lg:justify-between text-center">
                 <div className="h-2/6 w-3/5 md:w-1/4">
                     <Image className="rounded-full" src="/about.jpg" alt="Gerard Wesseling" height={250} width={250} layout="responsive" objectFit="contain" />

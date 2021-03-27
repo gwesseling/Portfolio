@@ -1,7 +1,10 @@
 import React from 'react';
 import Topbar from '_COMPONENTS/Topbar';
 
-export default function Banner({onAbout, onProjects}) {
+/** 
+ * Banner component
+ */
+export default function Banner() {
     return (
         <div className="banner relative bg-cover bg-banner bg-center-bottom">
             <div className="h-full w-full absolute bg-gradient-to-b from-transparent to-gray-700"/>

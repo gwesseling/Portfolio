@@ -7,11 +7,14 @@ import Divider from '_COMPONENTS/Divider';
 import Projects from '_COMPONENTS/Projects';
 import useHome from './containerHook';
 
+/** 
+ * Home page.
+ */
 export default function Home() {
     const {aboutRef, projectsRef, onAbout, onProjects} = useHome();
 
     return(
-        <div className="h-screen w-screen bg-off-white">
+        <div className="h-screen w-screen">
             <Head>
                 <title>Gwesseling - Software Engineer student</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />

@@ -1,5 +1,19 @@
 import {faDesktop} from '@fortawesome/free-solid-svg-icons';
-import {faAppStoreIos, faGooglePlay, faYoutube} from '@fortawesome/free-brands-svg-icons'
+import {faAppStoreIos, faGooglePlay, faYoutube, faGithub} from '@fortawesome/free-brands-svg-icons'
+
+type ButtonType = {
+    text: string,
+    icon: any,
+    url: string,
+}
+
+export type ProjectType = {
+    title: string,
+    subtitle: string,
+    description: string,
+    cover: string,
+    buttons?: Array<ButtonType>
+}
 
 export default [
     {
@@ -11,14 +25,17 @@ export default [
             {
                 text: 'Website',
                 icon: faDesktop,
+                url: "https://tradecast.tv/"
             },
             {
                 text: 'Android',
                 icon: faGooglePlay,
+                url: "https://play.google.com/store/apps/details?id=eu.tradecast.tradecasttv"
             },
             {
                 text: "iOS",
                 icon: faAppStoreIos,
+                url: "https://apps.apple.com/nl/app/tradecast-tv/id1045905936"
             }
         ]
     }, 
@@ -31,6 +48,7 @@ export default [
             {
                 text: 'Website',
                 icon: faDesktop,
+                url: "https://play.phantune.com"
             },
         ],
     },
@@ -45,17 +63,30 @@ export default [
         subtitle: "APP (WIP)",
         description: "React Native app created based on the 100 Thieves website. The app is built to maintain my react native skills and experiment with new techniques. The app is no way affiliated with 100 Thieves.",
         cover: "/projects/thieves.png",
+        buttons: [
+            {
+                text: 'GitHub',
+                icon: faGithub,
+                url: "https://github.com/gwesseling/100-Thieves",
+            }
+        ]
     },
     {
         title: "Teamtrees tree counter",
         subtitle: "Single Page App",
         description: "",
-        cover: "/projects/thieves.png",
+        cover: "/projects/teamtrees.png",
         buttons: [
             {
                 text: 'Website',
                 icon: faDesktop,
+                url: "https://teamtrees.gwesseling.nl/"
             },
+            {
+                text: 'GitHub',
+                icon: faGithub,
+                url: "https://github.com/gwesseling/Teamtrees",
+            }
         ]
     },
     {
@@ -66,7 +97,8 @@ export default [
         buttons: [
             {
                 text: "Watch video",
-                icon: faYoutube
+                icon: faYoutube,
+                url: "https://www.youtube.com/watch?v=6_ZGwLHD72o"
             }
         ]
     },
@@ -78,7 +110,8 @@ export default [
         buttons: [
             {
                 text: "Watch video",
-                icon: faYoutube
+                icon: faYoutube,
+                url: "https://www.youtube.com/watch?v=0n_dJSFxwV0",
             }
         ]
     },
