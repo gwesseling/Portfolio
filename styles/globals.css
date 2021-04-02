@@ -13,12 +13,35 @@ body {
 .bg-center-bottom {
     background-position: center bottom;
 }
+
+.project-wrapper {
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.project {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
 .project-content-height {
     max-height: 80px;
     transition: max-height .2s;
 }
 .project-content-height.active {
     max-height: 400px;
+}
+
+@layer utilities {
+    @variants responsive {
+        .wm-33 {
+            width: calc(33% - 15px);
+        }
+
+        .wm-50 {
+            width: calc(50% - 15px);
+        }
+    }
 }
 
 @media only screen and (max-width: 768px) {

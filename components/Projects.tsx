@@ -8,7 +8,7 @@ import projects from '_MOCKS/projects';
  */
 function Projects(props, ref) {
     return (
-        <div className="flex flex-row flex-wrap md:p-4 md:pr-8 bg-off-white" ref={ref}>
+        <div className="project-wrapper flex flex-row flex-wrap bg-off-white" ref={ref}>
            {projects.map((project, i) => <Project key={i} {...project} />)}
         </div>
     );

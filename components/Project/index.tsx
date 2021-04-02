@@ -14,8 +14,8 @@ export default function Project({title, subtitle, description, cover, buttons = 
     const {active, onEnter, onLeave} = useProject();
 
     return (
-        <div className="relative h-60 md:h-80 md:w-3/6 lg:w-1/3 w-full shadow-lg" onMouseEnter={onEnter} onMouseLeave={onLeave}>
-            <div className="h-full w-full flex flex-col justify-end absolute bg-gradient-to-b from-transparent to-black z-50">
+        <div className="project relative h-60 md:h-80 md:wm-50 lg:wm-33 w-full shadow-lg" onMouseEnter={onEnter} onMouseLeave={onLeave}>
+            <div className="h-full w-full flex flex-col justify-end absolute bg-gradient-to-b from-transparent to-black z-50 rounded">
                 <div className={`p-4 project-content-height overflow-hidden ${active ? 'active' : ''}`}>
                     <p className="text-xl sm:text-2xl text-white font-bold mb-0.5">{title}</p>
                     <p className="text-xs sm:text-sm text-gray-400 mb-3.5">{subtitle}</p>
@@ -30,7 +30,7 @@ export default function Project({title, subtitle, description, cover, buttons = 
                     </div>
                 </div>
             </div>
-            <Image src={cover} alt={title} layout="fill" objectFit="cover" />
+            <Image className="rounded" src={cover} alt={title} layout="fill" objectFit="cover" />
         </div>
     );
 }
