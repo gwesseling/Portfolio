@@ -12,6 +12,7 @@ export type ProjectType = {
     subtitle: string,
     description: string,
     cover: string,
+    images?: Array<string>,
     preview?: boolean,
     buttons?: Array<ButtonType>
 }

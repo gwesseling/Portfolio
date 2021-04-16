@@ -30,27 +30,19 @@ export default function Animation(props: Props) {
 
     return (
         <TransitionGroup className={className} childFactory={childFactory} {...restProps}>
-            {childs.map((child) => {
-                if (child) {
-                    if (child.key == null) {
-                        throw new Error("Animation child should have a key");
-                    }
-
-                    return (
-                        <CSSTransition
-                            classNames={animation}
-                            timeout={{
-                                appear: appear,
-                                enter: enter,
-                                exit: leave,
-                            }}
-                            key={child.key}
-                        >
-                            {child}
-                        </CSSTransition>
-                    );
-                }
-            })}
+            {childs.map((child) => (
+                    <CSSTransition
+                        classNames={animation}
+                        timeout={{
+                            appear: appear,
+                            enter: enter,
+                            exit: leave,
+                        }}
+                    >
+                        {child}
+                    </CSSTransition>
+                )
+            )}
         </TransitionGroup>
     );
 }
