@@ -2,7 +2,6 @@ import React from 'react';
 import Project from '_COMPONENTS/Project';
 import projects from '_MOCKS/projects';
 
-// TODO: preview designs
 /** 
  * Project wrapper component.
  */

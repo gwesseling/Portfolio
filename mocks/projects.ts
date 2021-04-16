@@ -1,10 +1,10 @@
 import {faDesktop} from '@fortawesome/free-solid-svg-icons';
-import {faAppStoreIos, faGooglePlay, faYoutube, faGithub} from '@fortawesome/free-brands-svg-icons'
+import {faAppStoreIos, faGooglePlay, faYoutube, faGithub} from '@fortawesome/free-brands-svg-icons';
 
 type ButtonType = {
     text: string,
     icon: any,
-    url: string,
+    url?: string,
 }
 
 export type ProjectType = {
@@ -12,6 +12,7 @@ export type ProjectType = {
     subtitle: string,
     description: string,
     cover: string,
+    preview?: boolean,
     buttons?: Array<ButtonType>
 }
 
@@ -74,7 +75,7 @@ export default [
     {
         title: "Teamtrees tree counter",
         subtitle: "Single Page App",
-        description: "",
+        description: "A website that counts the amount of trees planted by the Arbor Day Foundation.",
         cover: "/projects/teamtrees.png",
         buttons: [
             {
@@ -120,17 +121,43 @@ export default [
         subtitle: "Electron app (currently on hold)",
         description: "A gamestore front-end inspired by stores like Steam and the Epic Game Store.",
         cover: "/projects/gamesive.jpg",
+        images: [
+            '/projects/game/home.png',
+            '/projects/game/home1.png',
+            '/projects/game/library.png',
+            '/projects/game/profile.png',
+            '/projects/game/game.png',
+            '/projects/game/company.png',
+        ],
+        preview: true,
     },
     {
         title: "Baymax",
         subtitle: "Design",
         description: "Healthcare AI based on Big Hero Six's Baymax. This design is no way affiliated with Disney.",
         cover: "/projects/baymax.png",
+        images: [
+            '/projects/baymax/baymax.png',
+            '/projects/baymax/heart.png',
+            '/projects/baymax/information.png',
+            '/projects/baymax/search.png',
+            '/projects/baymax/doctors.png',
+            '/projects/baymax/video.png',
+        ],
+        preview: true,
     },
     {
         title: "Overwatch League website redesign",
         subtitle: "Design",
         description: "A redesign of the Overwatch League website. This design is no way affiliated with Overwatch.",
         cover: "/projects/overwatch.png",
+        images: [
+            '/projects/ow/ow1.png',
+            '/projects/ow/ow2.png',
+            '/projects/ow/ow3.png',
+            '/projects/ow/ow4.png',
+            '/projects/ow/full.png',
+        ],
+        preview: true,
     }
 ]; 

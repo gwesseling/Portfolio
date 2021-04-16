@@ -1,17 +1,23 @@
 import {ReactNode} from 'react';
-import useProject from './containerHook';
 import Image from 'next/image'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faDesktop} from '@fortawesome/free-solid-svg-icons';
+import useProject from './containerHook';
 import {ProjectType} from '_MOCKS/projects';
+import Button from '_SHARED/Button';
+import {faDesktop, faEye} from '@fortawesome/free-solid-svg-icons';
+import useModal from '_HOOKS/modal';
 
 type Props = ProjectType;
 
 /** 
  * Project component.
  */
-export default function Project({title, subtitle, description, cover, buttons = []}: Props) {
+export default function Project({title, subtitle, description, preview = false, images = [], cover, buttons = []}: Props) {
     const {active, onEnter, onLeave} = useProject();
+    const {openModal: openModalNative} = useModal();
+
+    function openModal() {
+        openModalNative(images);
+    }
 
     return (
         <div className="project relative h-60 md:h-80 md:wm-50 lg:wm-33 w-full shadow-lg" onMouseEnter={onEnter} onMouseLeave={onLeave}>
@@ -21,12 +27,12 @@ export default function Project({title, subtitle, description, cover, buttons = 
                     <p className="text-xs sm:text-sm text-gray-400 mb-3.5">{subtitle}</p>
                     <p className="text-sm sm:text-base text-gray-400 mb-2.5">{description}</p>
                     <div>
-                        {buttons.map(({text, icon, url}, i) => 
-                            <a href={url} target="_blank" className="text-white rounded bg-green-500 px-2 py-1.5 text-sm mr-2" key={i}>
-                                <FontAwesomeIcon className="mr-2" icon={icon} />
-                                {text}
-                            </a>
-                        )}  
+                        {buttons.map((button, i) => 
+                            <Button {...button} key={i} />
+                        )}
+                        {preview ? 
+                            <Button icon={faEye} text="preview" onClick={openModal} /> : null
+                        }  
                     </div>
                 </div>
             </div>
